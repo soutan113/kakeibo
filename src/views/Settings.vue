@@ -60,7 +60,7 @@ export default {
       stringRule: v => v.length <= 150 || '150文字以内で入力してください',
       categoryRules: [
         v => createItems(v).length !== 0 || 'カテゴリは1つ以上必要です',
-        v => itemMaxLength(v) <= 4 || '各カテゴリは4文字以内で入力してください'
+        v => itemMaxLength(v) <= 8 || '各カテゴリは8文字以内で入力してください'
       ]
     }
   },
