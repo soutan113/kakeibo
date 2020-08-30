@@ -1,5 +1,5 @@
 module.exports = {
-  "transpileDependencies": [
-    "vuetify"
-  ]
+  "transpileDependencies": ["vuetify" ],
+  publicPath: '/kakeibo/',
+     outputDir: 'docs'
 }
