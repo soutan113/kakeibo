@@ -25,7 +25,7 @@
         <!-- カテゴリ -->
         <v-select label="カテゴリ" v-model="category" :items="categoryItems" hide-details />
         <!-- 金額 -->
-        <v-text-field label="金額" v-model.number="amount" prefix="￥" pattern="[0-9]*" :rules="amountRules" />
+        <v-text-field label="金額" v-model.number="amount" type="number" prefix="￥" pattern="[0-9]*" :rules="amountRules" />
         <!-- メモ -->
         <v-text-field label="メモ" v-model="memo" :counter="50" :rules="[memoRule]" />
       </v-form>
