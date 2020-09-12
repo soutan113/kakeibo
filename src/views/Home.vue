@@ -28,8 +28,21 @@
       </v-col>
     </v-card-title>
     <!-- テーブル -->
-    <v-data-table class="text-no-wrap" :headers="tableHeaders" :items="tableData" :search="search" :footer-props="footerProps" :loading="loading" :sort-by="'date'" :sort-desc="true" :items-per-page="30" mobile-breakpoint="0">
-      <!-- 日付列 -->
+    <v-data-table
+         class="text-no-wrap"
+         :headers="tableHeaders"
+         :items="tableData"
+         :search="search"
+         :footer-props="{
+                   'items-per-page-options': [500],
+                   showFirstLastPage: true,
+                 }"
+         :loading="loading"
+         :sort-by="'date'"
+         :sort-desc="true"
+         mobile-breakpoint="0"
+       >
+             <!-- 日付列 -->
       <template v-slot:item.date="{ item }">
         {{ parseInt(item.date.slice(-2)) + '日' }}
       </template>
